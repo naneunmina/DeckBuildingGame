@@ -4,22 +4,28 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    public TMP_Text turnText;
-    public Slider timerSlider;
-    public TMP_Text timerText;
-    public TMP_Text goldText;
-    public TMP_Text almondText;
-    public TMP_Text sugarText;
-    public TMP_Text eggText;
+    [Header("UI References")]
+    [SerializeField] private TMP_Text turnText;
+    [SerializeField] private Slider timerSlider;
+    [SerializeField] private TMP_Text timerText;
+    [SerializeField] private TMP_Text goldText;
+    [SerializeField] private TMP_Text almondText;
+    [SerializeField] private TMP_Text sugarText;
+    [SerializeField] private TMP_Text eggText;
+    [SerializeField] private TMP_Text scoreText;
 
-    public TurnManager turnManager;
-    public ResourceManager resourceManager;
+    [Header("Managers")]
+    [SerializeField] private TurnManager turnManager;
+    [SerializeField] private ResourceManager resourceManager;
+    [SerializeField] private ScoreManager scoreManager;
 
     void OnEnable()
     {
         turnManager.OnTurnChanged.AddListener(UpdateTurnUI);
         turnManager.OnTimerUpdated.AddListener(UpdateTimerUI);
         turnManager.OnGoldChanged.AddListener(UpdateGoldUI);
+        scoreManager.OnScoreChanged.AddListener(UpdateScoreUI);
+        resourceManager.OnResourceChanged.AddListener(UpdateResourcesUI);
     }
 
     void Start()
@@ -28,6 +34,7 @@ public class UIManager : MonoBehaviour
         UpdateTurnUI(turnManager.currentTurn);
         UpdateGoldUI(turnManager.currentGold);
         UpdateResourcesUI();
+        UpdateScoreUI(scoreManager.GetFinalScore());
         // 매 턴 종료 때도 리소스 갱신
         turnManager.OnTurnEnded.AddListener(UpdateResourcesUI);
     }
@@ -52,7 +59,12 @@ public class UIManager : MonoBehaviour
     {
         var rm = resourceManager;
         almondText.text = rm.almond.ToString();
-        sugarText.text  = rm.sugar.ToString();
-        eggText.text    = rm.egg.ToString();
+        sugarText.text = rm.sugar.ToString();
+        eggText.text = rm.egg.ToString();
+    }
+    
+    public void UpdateScoreUI(int score)
+    {
+        scoreText.text = $"Score: {score}";
     }
 }
