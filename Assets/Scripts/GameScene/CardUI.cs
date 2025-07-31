@@ -8,7 +8,7 @@ public class CardUI : MonoBehaviour
     [SerializeField] private TMP_Text nameText;
     [SerializeField] private TMP_Text costText;
 
-    private CardSO cardData;
+    private CardInstance instance;
     private HandManager handManager;
     private ShopManager shopManager;
     private ResourceManager resourceManager;
@@ -17,7 +17,7 @@ public class CardUI : MonoBehaviour
     private int slotIndex;
 
     public void Initialize(
-        CardSO data,
+        CardInstance data,
         HandManager hm,
         ResourceManager rm,
         ShopManager sm,
@@ -25,7 +25,7 @@ public class CardUI : MonoBehaviour
         bool isInShop,
         int index)
     {
-        cardData = data;
+        instance = data;
         handManager = hm;
         resourceManager = rm;
         shopManager = sm;
@@ -33,15 +33,15 @@ public class CardUI : MonoBehaviour
         inShop = isInShop;
         slotIndex = index;
 
-        icon.sprite = data.icon;
-        nameText.text = data.cardName;
-        costText.text = data.cost.ToString();
+        icon.sprite = data.Data.icon;
+        nameText.text = data.Data.cardName;
+        costText.text = data.Data.cost.ToString();
 
         var btn = GetComponent<Button>();
         btn.onClick.RemoveAllListeners();
         if (inShop)
             btn.onClick.AddListener(() => shopManager.Purchase(slotIndex));
         else
-            btn.onClick.AddListener(() => handManager.UseCard(cardData));
+            btn.onClick.AddListener(() => handManager.UseCard(instance));
     }
 }
