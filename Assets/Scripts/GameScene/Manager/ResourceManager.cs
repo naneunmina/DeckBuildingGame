@@ -25,13 +25,19 @@ public class ResourceManager : MonoBehaviour
         {
             case "Almond":
                 if (almond < amount) { almond = 0; return false; }
-                almond -= amount; return true;
+                almond -= amount;
+                OnResourceChanged?.Invoke();
+                return true;
             case "Sugar":
                 if (sugar < amount) { sugar = 0; return false; }
-                sugar -= amount; return true;
+                sugar -= amount;
+                OnResourceChanged?.Invoke();
+                return true;
             case "Egg":
                 if (egg < amount) { egg = 0; return false; }
-                egg -= amount; return true;
+                egg -= amount;
+                OnResourceChanged?.Invoke();
+                return true;
         }
         return false;
     }

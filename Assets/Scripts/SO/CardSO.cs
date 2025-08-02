@@ -8,7 +8,7 @@ public class CardSO : ScriptableObject
     public string cardID;
     public string cardName;
     public CardType cardType;
-    public int cost;
+    private int cost;
     public Sprite icon;
     // additional fields per card type
     public int value;
@@ -23,5 +23,10 @@ public class CardSO : ScriptableObject
     {
         Debug.Log($"Playing card: {cardName}");
         // basic stub: implement behavior based on cardType or subclass
+    }
+
+    public virtual int GetCost()
+    {
+        return cost;
     }
 }

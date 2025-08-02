@@ -1,38 +1,69 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
+
+public enum SpecialType { Special1, Special2, Special3, Special4, Special5 }
 
 public class MacaronManager : MonoBehaviour
 {
     [SerializeField] private ResourceManager resourceMgr;
+    [SerializeField] private TurnManager turnManager;
     [SerializeField] private ScoreManager scoreMgr;
 
     private int plainCount;       // 이번 턴 생산된 일반 마카롱 수
-    private int specialCount;     // 이번 턴 생산된 특수 마카롱 수
+    private int[] specialCounts = new int[5];     // 이번 턴 생산된 특수 마카롱 수
+
+    [SerializeField] private int plainPrice = 5;
+    [SerializeField] private int[] specialPrices = { 10, 12, 15, 20, 25 };
+
+    public UnityEvent<int> OnPlainCountChanged;
+    public UnityEvent<SpecialType, int> OnSpecialCountChanged;
     /// <summary>
     /// 재료 소비 후 일반 마카롱 생산
     /// </summary>
-    public int ProducePlain(int almondNeeded, int sugarNeeded, int eggNeeded)
+
+    private void Awake()
     {
-        // 가능한 생산 개수 계산
-        int possible = Mathf.Min(resourceMgr.almond / almondNeeded,
-                                resourceMgr.sugar / sugarNeeded,
-                                resourceMgr.egg / eggNeeded);
-        // 자원 차감
+        if (OnPlainCountChanged == null) OnPlainCountChanged = new UnityEvent<int>();
+        if (OnSpecialCountChanged == null) OnSpecialCountChanged = new UnityEvent<SpecialType, int>();
+
+        turnManager.OnTurnEnded.AddListener(SellAllAndReset);
+
+        // 초기 카운트(0) 알림
+        OnPlainCountChanged.Invoke(plainCount);
+        foreach (SpecialType type in System.Enum.GetValues(typeof(SpecialType)))
+        {
+            OnSpecialCountChanged.Invoke(type, specialCounts[(int)type]);
+        }
+    }
+    public int ProducePlain(int desiredCount, int almondNeeded, int sugarNeeded, int eggNeeded)
+    {
+        int possible = Mathf.Min(
+            desiredCount,
+            resourceMgr.almond / almondNeeded,
+            resourceMgr.sugar  / sugarNeeded,
+            resourceMgr.egg    / eggNeeded
+        );
+        if (possible <= 0) return 0;
+
         resourceMgr.ConsumeResource("Almond", possible * almondNeeded);
-        resourceMgr.ConsumeResource("Sugar", possible * sugarNeeded);
-        resourceMgr.ConsumeResource("Egg", possible * eggNeeded);
+        resourceMgr.ConsumeResource("Sugar",  possible * sugarNeeded);
+        resourceMgr.ConsumeResource("Egg",    possible * eggNeeded);
+
         plainCount += possible;
+        OnPlainCountChanged.Invoke(plainCount);
         return possible;
     }
 
     /// <summary>
     /// 특수 마카롱 생산 (토핑 적용)
     /// </summary>
-    public int ProduceSpecial(int toppingCardValue)
+    public void ProduceSpecial(int count, SpecialType type)
     {
-        // 특수 마카롱은 생산 카드/토핑 카드로 추가 생산량 제공
-        specialCount += toppingCardValue;
-        return toppingCardValue;
+        plainCount -= count;
+        specialCounts[(int)type] += count;
+        OnPlainCountChanged.Invoke(plainCount);
+        OnSpecialCountChanged.Invoke(type, specialCounts[(int)type]);
     }
 
     /// <summary>
@@ -40,16 +71,37 @@ public class MacaronManager : MonoBehaviour
     /// </summary>
     public void SellAllAndReset()
     {
-        if (plainCount > 0)
+        int plainRevenue = plainCount * plainPrice;
+        if (plainRevenue > 0)
+        {
+            turnManager.AddGold(plainRevenue);
             scoreMgr.AddPlain(plainCount);
-        if (specialCount > 0)
-            scoreMgr.AddSpecial(specialCount);
+        }
+
+        // Sell special macarons
+        foreach (SpecialType type in System.Enum.GetValues(typeof(SpecialType)))
+        {
+            int idx = (int)type;
+            int count = specialCounts[idx];
+            if (count > 0)
+            {
+                int specialRevenue = count * specialPrices[idx];
+                turnManager.AddGold(specialRevenue);
+                scoreMgr.AddSpecial(count, idx);
+            }
+            specialCounts[idx] = 0;
+            OnSpecialCountChanged.Invoke(type, 0);
+        }
+
+        // Reset plain count
         plainCount = 0;
-        specialCount = 0;
+        OnPlainCountChanged.Invoke(plainCount);
     }
+
+    public int GetPlainCount() => plainCount;
     
-    public void ProduceFacilityMacarons(int count)
+    public int GetSpecialCount(SpecialType type)
     {
-        plainCount += count;
+        return specialCounts[(int)type];
     }
 }

@@ -81,7 +81,7 @@ public class ShopManager : MonoBehaviour
         if (isLocked[slotIndex]) return false;
         var card = shopSlots[slotIndex];
         if (card == null) return false;
-        if (!turnManager.SpendGold(card.Data.cost)) return false;
+        if (!turnManager.SpendGold(card.Data.GetCost())) return false;
 
         bool drawn = handManager.DrawCard(card);
         if (!drawn)

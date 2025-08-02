@@ -13,12 +13,22 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text sugarText;
     [SerializeField] private TMP_Text eggText;
     [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text plainCountText;
+    [SerializeField] private TMP_Text[] specialCountTexts;
+
+    [Header("Facility Rate UI")]
+    [SerializeField] private TMP_Text almondRateText;
+    [SerializeField] private TMP_Text sugarRateText;
+    [SerializeField] private TMP_Text eggRateText;
+    [SerializeField] private TMP_Text macaronRateText;
 
     [Header("Managers")]
     [SerializeField] private TurnManager turnManager;
     [SerializeField] private ResourceManager resourceManager;
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private ShopManager shopManager;
+    [SerializeField] private MacaronManager macaronManager;
+    [SerializeField] private FacilityManager facilityManager;
 
     void OnEnable()
     {
@@ -27,6 +37,12 @@ public class UIManager : MonoBehaviour
         turnManager.OnGoldChanged.AddListener(UpdateGoldUI);
         scoreManager.OnScoreChanged.AddListener(UpdateScoreUI);
         resourceManager.OnResourceChanged.AddListener(UpdateResourcesUI);
+        facilityManager.OnAlmondProductionChanged.AddListener(UpdateAlmondRateUI);
+        facilityManager.OnSugarProductionChanged.AddListener(UpdateSugarRateUI);
+        facilityManager.OnEggProductionChanged.AddListener(UpdateEggRateUI);
+        facilityManager.OnMacaronProductionChanged.AddListener(UpdateMacaronRateUI);
+        macaronManager.OnPlainCountChanged.AddListener(UpdatePlainCountUI);
+        macaronManager.OnSpecialCountChanged.AddListener(UpdateSpecialCountUI);
     }
 
     void Start()
@@ -36,37 +52,64 @@ public class UIManager : MonoBehaviour
         UpdateGoldUI(turnManager.currentGold);
         UpdateResourcesUI();
         UpdateScoreUI(scoreManager.GetFinalScore());
+        UpdateAlmondRateUI(facilityManager.AlmondProduction);
+        UpdateSugarRateUI(facilityManager.SugarProduction);
+        UpdateEggRateUI(facilityManager.EggProduction);
+        UpdateMacaronRateUI(facilityManager.MacaronProduction);
+        foreach (SpecialType t in System.Enum.GetValues(typeof(SpecialType)))
+        {
+            UpdateSpecialCountUI(t, macaronManager.GetSpecialCount(t));
+        }
+
         // 매 턴 종료 때도 리소스 갱신
         turnManager.OnTurnEnded.AddListener(UpdateResourcesUI);
     }
 
-    void UpdateTurnUI(int turn)
+    private void UpdateTurnUI(int turn)
     {
         turnText.text = $"Turn {turn}/{turnManager.maxTurns}";
-        if (turn>1) shopManager.RefreshShop();
+        if (turn > 1) shopManager.RefreshShop();
     }
 
-    void UpdateTimerUI(float remaining)
+    private void UpdateTimerUI(float remaining)
     {
         timerSlider.value = remaining / turnManager.turnTimeSeconds;
         timerText.text = $"{Mathf.CeilToInt(remaining)}s";
     }
 
-    void UpdateGoldUI(int gold)
+    private void UpdateGoldUI(int gold)
     {
         goldText.text = $"{gold}G";
     }
 
-    void UpdateResourcesUI()
+    private void UpdateResourcesUI()
     {
         var rm = resourceManager;
         almondText.text = rm.almond.ToString();
         sugarText.text = rm.sugar.ToString();
         eggText.text = rm.egg.ToString();
     }
-    
-    public void UpdateScoreUI(int score)
+
+    private void UpdateScoreUI(int score)
     {
         scoreText.text = $"Score: {score}";
     }
+    private void UpdatePlainCountUI(int count)
+    {
+        plainCountText.text = $"Macarons: {count}";
+    }
+
+    public void UpdateSpecialCountUI(SpecialType type, int count)
+    {
+        int idx = (int)type;
+        if (idx >= 0 && idx < specialCountTexts.Length)
+        {
+            specialCountTexts[idx].text = $"{type}: {count}";
+        }
+    }
+    
+    private void UpdateAlmondRateUI(int rate)   => almondRateText.text   = $"Almond/Turn: {rate}";
+    private void UpdateSugarRateUI(int rate)    => sugarRateText.text    = $"Sugar/Turn: {rate}";
+    private void UpdateEggRateUI(int rate)      => eggRateText.text      = $"Egg/Turn: {rate}";
+    private void UpdateMacaronRateUI(int rate)  => macaronRateText.text  = $"Oven/Turn: {rate}";
 }

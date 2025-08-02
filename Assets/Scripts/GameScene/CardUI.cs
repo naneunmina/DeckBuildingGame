@@ -35,7 +35,7 @@ public class CardUI : MonoBehaviour
 
         icon.sprite = data.Data.icon;
         nameText.text = data.Data.cardName;
-        costText.text = data.Data.cost.ToString();
+        costText.text = data.Data.GetCost().ToString();
 
         var btn = GetComponent<Button>();
         btn.onClick.RemoveAllListeners();
