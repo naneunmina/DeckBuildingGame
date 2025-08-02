@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fac_OneEgg
   m_EditorClassIdentifier: 
   cardID: 
-  cardName: "\uACC4\uB780 \uC0DD\uC0B0 \uC124\uBE44 +1"
+  cardName: "\uB2EC\uAC40 \uC0DD\uC0B0 \uC124\uBE44 +1"
   cardType: 1
   cost: 5
   icon: {fileID: 0}

@@ -26,7 +26,7 @@ public class ToppingCardSO : CardSO
       Debug.LogWarning("MacaronManager not found. Cannot produce special.");
       return;
     }
-
+    if (macaronManager.GetPlainCount() <= 0) return;
     int typeIndex = (int)specialType;
     macaronManager.ProduceSpecial(level, specialType);
   }

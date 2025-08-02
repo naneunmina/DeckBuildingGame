@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ing_ThreeAlmondEgg
   m_EditorClassIdentifier: 
   cardID: 
-  cardName: "\uC544\uBAAC\uB4DC, \uACC4\uB780 \uAC01 \uC138 \uAC1C!"
+  cardName: "\uC544\uBAAC\uB4DC, \uB2EC\uAC40 \uAC01 \uC138 \uAC1C!"
   cardType: 0
   cost: 6
   icon: {fileID: 0}

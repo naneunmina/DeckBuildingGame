@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ing_FiveSugarEgg
   m_EditorClassIdentifier: 
   cardID: 
-  cardName: "\uC124\uD0D5, \uACC4\uB780 \uAC01 \uB2E4\uC12F \uAC1C!"
+  cardName: "\uC124\uD0D5, \uB2EC\uAC40 \uAC01 \uB2E4\uC12F \uAC1C!"
   cardType: 0
   cost: 10
   icon: {fileID: 0}

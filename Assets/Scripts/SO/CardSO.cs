@@ -8,7 +8,7 @@ public class CardSO : ScriptableObject
     public string cardID;
     public string cardName;
     public CardType cardType;
-    private int cost;
+    public int cost;
     public Sprite icon;
     // additional fields per card type
     public int value;
@@ -25,8 +25,5 @@ public class CardSO : ScriptableObject
         // basic stub: implement behavior based on cardType or subclass
     }
 
-    public virtual int GetCost()
-    {
-        return cost;
-    }
+    public virtual int GetCost() => cost;
 }
