@@ -46,9 +46,7 @@ public class MacaronManager : MonoBehaviour
         );
         if (possible <= 0) return 0;
 
-        resourceMgr.ConsumeResource("Almond", possible * almondNeeded);
-        resourceMgr.ConsumeResource("Sugar",  possible * sugarNeeded);
-        resourceMgr.ConsumeResource("Egg",    possible * eggNeeded);
+        resourceMgr.AddResource(-possible * almondNeeded, -possible * sugarNeeded, -possible * eggNeeded);
 
         plainCount += possible;
         OnPlainCountChanged.Invoke(plainCount);

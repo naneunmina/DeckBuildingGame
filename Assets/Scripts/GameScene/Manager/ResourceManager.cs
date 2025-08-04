@@ -8,37 +8,11 @@ public class ResourceManager : MonoBehaviour
     public int egg    { get; private set; }
     public UnityEvent OnResourceChanged;
 
-    public void AddResource(string type, int amount)
+    public void AddResource(int a, int b, int c)
     {
-        switch (type)
-        {
-            case "Almond": almond += amount; break;
-            case "Sugar": sugar += amount; break;
-            case "Egg": egg += amount; break;
-        }
+        almond += a;
+        sugar += b;
+        egg += c;
         OnResourceChanged?.Invoke();
-    }
-
-    public bool ConsumeResource(string type, int amount)
-    {
-        switch(type)
-        {
-            case "Almond":
-                if (almond < amount) { almond = 0; return false; }
-                almond -= amount;
-                OnResourceChanged?.Invoke();
-                return true;
-            case "Sugar":
-                if (sugar < amount) { sugar = 0; return false; }
-                sugar -= amount;
-                OnResourceChanged?.Invoke();
-                return true;
-            case "Egg":
-                if (egg < amount) { egg = 0; return false; }
-                egg -= amount;
-                OnResourceChanged?.Invoke();
-                return true;
-        }
-        return false;
     }
 }

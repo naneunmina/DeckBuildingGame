@@ -75,9 +75,7 @@ public class FacilityManager : MonoBehaviour
         }
         if (turnManager.currentTurn <= 1) return;
         // Supply basic ingredients
-        resourceManager.AddResource("Almond", almondProduction);
-        resourceManager.AddResource("Sugar", sugarProduction);
-        resourceManager.AddResource("Egg", eggProduction);
+        resourceManager.AddResource(almondProduction, sugarProduction, eggProduction);
 
         
     }
