@@ -31,8 +31,8 @@ public class ToppingCardSO : CardSO
     macaronManager.ProduceSpecial(level, specialType);
   }
 
-  public override int GetCost()
-  {
-    return base.GetCost()*level;
-  }
+  // public override int GetCost()
+  // {
+  //   return base.GetCost()*level;
+  // }
 }

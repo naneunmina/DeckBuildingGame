@@ -52,6 +52,7 @@ public class UIManager : MonoBehaviour
         UpdateGoldUI(turnManager.currentGold);
         UpdateResourcesUI();
         UpdateScoreUI(scoreManager.GetFinalScore());
+        UpdatePlainCountUI(macaronManager.GetPlainCount());
         UpdateAlmondRateUI(facilityManager.AlmondProduction);
         UpdateSugarRateUI(facilityManager.SugarProduction);
         UpdateEggRateUI(facilityManager.EggProduction);
@@ -96,7 +97,7 @@ public class UIManager : MonoBehaviour
     }
     private void UpdatePlainCountUI(int count)
     {
-        plainCountText.text = $"Macarons: {count}";
+        plainCountText.text = $"{count}";
     }
 
     public void UpdateSpecialCountUI(SpecialType type, int count)
@@ -104,12 +105,12 @@ public class UIManager : MonoBehaviour
         int idx = (int)type;
         if (idx >= 0 && idx < specialCountTexts.Length)
         {
-            specialCountTexts[idx].text = $"{type}: {count}";
+            specialCountTexts[idx].text = $"{count}";
         }
     }
     
-    private void UpdateAlmondRateUI(int rate)   => almondRateText.text   = $"Almond/Turn: {rate}";
-    private void UpdateSugarRateUI(int rate)    => sugarRateText.text    = $"Sugar/Turn: {rate}";
-    private void UpdateEggRateUI(int rate)      => eggRateText.text      = $"Egg/Turn: {rate}";
-    private void UpdateMacaronRateUI(int rate)  => macaronRateText.text  = $"Oven/Turn: {rate}";
+    private void UpdateAlmondRateUI(int rate)   => almondRateText.text   = $"+{rate}";
+    private void UpdateSugarRateUI(int rate)    => sugarRateText.text    = $"+{rate}";
+    private void UpdateEggRateUI(int rate)      => eggRateText.text      = $"+{rate}";
+    private void UpdateMacaronRateUI(int rate)  => macaronRateText.text  = $"+{rate}";
 }

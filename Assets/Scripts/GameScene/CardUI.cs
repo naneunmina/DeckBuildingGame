@@ -5,7 +5,9 @@ using TMPro;
 public class CardUI : MonoBehaviour
 {
     [SerializeField] private Image icon;
+    [SerializeField] private Image background;
     [SerializeField] private TMP_Text nameText;
+    [SerializeField] private TMP_Text discriptionText;
     [SerializeField] private TMP_Text costText;
 
     private CardInstance instance;
@@ -34,7 +36,9 @@ public class CardUI : MonoBehaviour
         slotIndex = index;
 
         icon.sprite = data.Data.icon;
+        background.sprite = data.Data.background;
         nameText.text = data.Data.cardName;
+        discriptionText.text = data.Data.cardDiscription;
         costText.text = data.Data.GetCost().ToString();
 
         var btn = GetComponent<Button>();

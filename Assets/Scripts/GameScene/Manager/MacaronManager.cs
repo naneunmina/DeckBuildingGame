@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-public enum SpecialType { Special1, Special2, Special3, Special4, Special5 }
+public enum SpecialType { Special1,  Special3,  Special5 }
 
 public class MacaronManager : MonoBehaviour
 {
