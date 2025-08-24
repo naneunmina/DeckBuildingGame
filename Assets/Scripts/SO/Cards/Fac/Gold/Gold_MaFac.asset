@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Gold_MaFac
   m_EditorClassIdentifier: 
   cardID: 
-  cardName: "\uB9C8\uCE74\uB871 \uACF5\uC7A5 \uC124\uB9BD"
+  cardName: "\uD30C\uD2F0\uC250 \uACE0\uC6A9"
   cardDiscription: "\uD134\uB2F9 \uB9C8\uCE74\uB871 \uC0DD\uC0B0 +1"
   cardType: 1
   cardRarity: 2
   cost: 0
   icon: {fileID: 0}
-  background: {fileID: 0}
+  background: {fileID: 6153641931356313673, guid: 5bad67b3720bacb40b513ff6826572b6, type: 3}
   value: 0
   facilityType: 3
   productionPerTurn: 5

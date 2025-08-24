@@ -19,7 +19,7 @@ MonoBehaviour:
   cardRarity: 2
   cost: 0
   icon: {fileID: 0}
-  background: {fileID: 0}
+  background: {fileID: 6153641931356313673, guid: 5bad67b3720bacb40b513ff6826572b6, type: 3}
   value: 0
   almondAmount: 4
   sugarAmount: 5

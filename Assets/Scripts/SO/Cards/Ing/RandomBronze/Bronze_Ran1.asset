@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Bronze_Ran1
   m_EditorClassIdentifier: 
   cardID: 
-  cardName: "\uC2DD\uC7AC\uB8CC \uAD6C\uB3C5 \uC11C\uBE44\uC2A4"
+  cardName: "\uC2DD\uC7AC\uB8CC \uAFB8\uB7EC\uBBF8"
   cardDiscription: "\uC138 \uAC00\uC9C0 \uC2DD\uC7AC\uB8CC \uCD1D +3"
   cardType: 0
   cardRarity: 0
   cost: 2
   icon: {fileID: 0}
-  background: {fileID: 0}
+  background: {fileID: 8747171696260727651, guid: 441114d50082eab45bea9e6e01bc17e0, type: 3}
   value: 0
   almondAmount: 1
   sugarAmount: 1

@@ -58,8 +58,16 @@ public class MacaronManager : MonoBehaviour
     /// </summary>
     public void ProduceSpecial(int count, SpecialType type)
     {
-        plainCount -= count;
-        specialCounts[(int)type] += count;
+        if (plainCount < count)
+        {
+            specialCounts[(int)type] += plainCount;
+            plainCount = 0;
+        }
+        else
+        {
+            plainCount -= count;
+            specialCounts[(int)type] += count;
+        }
         OnPlainCountChanged.Invoke(plainCount);
         OnSpecialCountChanged.Invoke(type, specialCounts[(int)type]);
     }

@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Silver_Ran2
   m_EditorClassIdentifier: 
   cardID: 
-  cardName: "\uC7AC\uB8CC \uB3C4\uB9E4\uC0C1"
+  cardName: "\uC2DD\uC7AC\uB8CC \uAD6C\uB3C5 \uC11C\uBE44\uC2A4"
   cardDiscription: "3\uAC00\uC9C0 \uC2DD\uC7AC\uB8CC \uCD1D +7"
   cardType: 0
   cardRarity: 1
   cost: 4
   icon: {fileID: 0}
-  background: {fileID: 0}
+  background: {fileID: 4830444739948473811, guid: d7630fd7833c4e943b22a0758ba4003e, type: 3}
   value: 0
   almondAmount: 3
   sugarAmount: 2

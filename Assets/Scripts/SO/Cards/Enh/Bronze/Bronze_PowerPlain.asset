@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2fe110aba088e64880945407a27a875, type: 3}
+  m_Name: Bronze_PowerPlain
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uB9C8\uCE74\uB871 \uACE0\uAE09\uD654 \uC804\uB7B5"
+  cardDiscription: "\uAE30\uBCF8 \uB9C8\uCE74\uB871 \uC810\uC218 5 \uC99D\uAC00"
+  cardType: 3
+  cardRarity: 0
+  cost: 7
+  icon: {fileID: 0}
+  background: {fileID: 8747171696260727651, guid: 441114d50082eab45bea9e6e01bc17e0, type: 3}
+  value: 0
+  bonus: 5

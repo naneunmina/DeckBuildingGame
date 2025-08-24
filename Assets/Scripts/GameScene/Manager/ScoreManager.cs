@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] private float basePlainScore = 100f;
-    [SerializeField] private float[] specialMultiplier = {1.2f,1.5f,1.8f,2.0f,2.5f};
+    [SerializeField] private float[] specialMultiplier = { 1.2f, 1.5f, 1.8f, 2.0f, 2.5f };
 
     public UnityEvent<int> OnScoreChanged;
     private float totalScore;
@@ -35,5 +35,12 @@ public class ScoreManager : MonoBehaviour
     public bool CheckEndCondition(int currentTurn, int maxTurn)
     {
         return currentTurn >= maxTurn;
+    }
+
+    public float GetBasePlainScore() => basePlainScore;
+
+    public void SetBasePlainScore(float newScore)
+    {
+        basePlainScore = newScore;
     }
 }

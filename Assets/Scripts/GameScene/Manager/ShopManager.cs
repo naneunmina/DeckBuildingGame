@@ -42,7 +42,7 @@ public class ShopManager : MonoBehaviour
 
     public void SetSilverDropChance(float probability)
     {
-        silverChance = Mathf.Clamp01(probability);
+        silverChance = Mathf.Clamp(silverChance + Mathf.Max(0f, probability), 0f, 0.30f);
     }
 
     public void ForceNextDropsSilver(int count)

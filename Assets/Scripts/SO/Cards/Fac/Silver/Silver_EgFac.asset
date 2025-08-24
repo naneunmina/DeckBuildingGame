@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Silver_EgFac
   m_EditorClassIdentifier: 
   cardID: 
-  cardName: "\uC591\uACC4\uC7A5 \uB9E4\uC785"
+  cardName: "\uACC4\uBAA8\uC784"
   cardDiscription: "\uD134\uB2F9 \uB2EC\uAC40 \uC0DD\uC0B0 +2"
   cardType: 1
   cardRarity: 0
   cost: 8
   icon: {fileID: 0}
-  background: {fileID: 0}
+  background: {fileID: 4830444739948473811, guid: d7630fd7833c4e943b22a0758ba4003e, type: 3}
   value: 0
   facilityType: 2
   productionPerTurn: 2

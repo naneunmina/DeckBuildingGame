@@ -6,8 +6,8 @@ public class UIManager : MonoBehaviour
 {
     [Header("UI References")]
     [SerializeField] private TMP_Text turnText;
-    [SerializeField] private Slider timerSlider;
-    [SerializeField] private TMP_Text timerText;
+    // [SerializeField] private Slider timerSlider;
+    // [SerializeField] private TMP_Text timerText;
     [SerializeField] private TMP_Text goldText;
     [SerializeField] private TMP_Text almondText;
     [SerializeField] private TMP_Text sugarText;
@@ -33,7 +33,7 @@ public class UIManager : MonoBehaviour
     void OnEnable()
     {
         turnManager.OnTurnChanged.AddListener(UpdateTurnUI);
-        turnManager.OnTimerUpdated.AddListener(UpdateTimerUI);
+        // turnManager.OnTimerUpdated.AddListener(UpdateTimerUI);
         turnManager.OnGoldChanged.AddListener(UpdateGoldUI);
         scoreManager.OnScoreChanged.AddListener(UpdateScoreUI);
         resourceManager.OnResourceChanged.AddListener(UpdateResourcesUI);
@@ -68,15 +68,15 @@ public class UIManager : MonoBehaviour
 
     private void UpdateTurnUI(int turn)
     {
-        turnText.text = $"Turn {turn}/{turnManager.maxTurns}";
+        turnText.text = $"{turn}/{turnManager.maxTurns}";
         if (turn > 1) shopManager.RefreshShop();
     }
 
-    private void UpdateTimerUI(float remaining)
-    {
-        timerSlider.value = remaining / turnManager.turnTimeSeconds;
-        timerText.text = $"{Mathf.CeilToInt(remaining)}s";
-    }
+    // private void UpdateTimerUI(float remaining)
+    // {
+    //     timerSlider.value = remaining / turnManager.turnTimeSeconds;
+    //     timerText.text = $"{Mathf.CeilToInt(remaining)}s";
+    // }
 
     private void UpdateGoldUI(int gold)
     {
@@ -93,7 +93,7 @@ public class UIManager : MonoBehaviour
 
     private void UpdateScoreUI(int score)
     {
-        scoreText.text = $"Score: {score}";
+        scoreText.text = $"{score}";
     }
     private void UpdatePlainCountUI(int count)
     {
