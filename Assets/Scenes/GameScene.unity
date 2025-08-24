@@ -3949,6 +3949,10 @@ MonoBehaviour:
   lowerRenderer: {fileID: 506332342}
   upperRenderer: {fileID: 721087317}
   turnManager: {fileID: 1009442433}
+  morningSeconds: 20
+  daySeconds: 40
+  eveningSeconds: 20
+  nightSeconds: 10
   blendCurve:
     serializedVersion: 2
     m_Curve:
