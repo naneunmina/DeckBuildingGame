@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Bronze_Sugar
   m_EditorClassIdentifier: 
   cardID: 
-  cardName: "\uC124\uD0D5 \uD55C \uCEF5"
+  cardName: "\uAC01\uC124\uD0D5"
   cardDiscription: "\uC124\uD0D5 +1"
   cardType: 0
   cardRarity: 0
   cost: 1
-  icon: {fileID: 0}
+  icon:
+  - {fileID: 4536546119277524743, guid: 84524b7fe1219f9479181ed69adf4d22, type: 3}
+  - {fileID: 7118336208102275919, guid: 84524b7fe1219f9479181ed69adf4d22, type: 3}
+  - {fileID: 651695645377811090, guid: 84524b7fe1219f9479181ed69adf4d22, type: 3}
+  - {fileID: -5018582712620672690, guid: 84524b7fe1219f9479181ed69adf4d22, type: 3}
   background: {fileID: 8747171696260727651, guid: 441114d50082eab45bea9e6e01bc17e0, type: 3}
   value: 0
   almondAmount: 0

@@ -19,7 +19,11 @@ MonoBehaviour:
   cardType: 3
   cardRarity: 2
   cost: 0
-  icon: {fileID: 0}
+  icon:
+  - {fileID: 964291344421816241, guid: 668932f626b6f5342b73b60a68c4296f, type: 3}
+  - {fileID: 8693699719671192564, guid: 668932f626b6f5342b73b60a68c4296f, type: 3}
+  - {fileID: 7002721420792787864, guid: 668932f626b6f5342b73b60a68c4296f, type: 3}
+  - {fileID: -3291086236267948854, guid: 668932f626b6f5342b73b60a68c4296f, type: 3}
   background: {fileID: 6153641931356313673, guid: 5bad67b3720bacb40b513ff6826572b6, type: 3}
   value: 0
   nextCount: 3

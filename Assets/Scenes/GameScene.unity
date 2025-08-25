@@ -1078,8 +1078,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4290016147
+  m_fontColor: {r: 0.57490903, g: 0.45056072, b: 0.7075472, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3556,6 +3556,7 @@ MonoBehaviour:
   shopSize: 5
   lockedSlots: 0
   silverChance: 0.08
+  maxSilverChance: 0.3
   bronzePool:
   - {fileID: 11400000, guid: b2b9053bf6370fc47b6bde8316dc6e2b, type: 2}
   - {fileID: 11400000, guid: c4da02ab42802404a9090ac069d81477, type: 2}

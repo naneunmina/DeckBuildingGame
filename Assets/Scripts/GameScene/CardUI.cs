@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -28,6 +29,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     private int slotIndex;
 
     Coroutine hoverRoutine;
+    Coroutine hoverAnim;
 
     public void Initialize(
         CardInstance data,
@@ -46,7 +48,9 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         inShop = isInShop;
         slotIndex = index;
 
-        icon.sprite = data.Data.icon;
+        StopAllCoroutines();
+
+        icon.sprite = data.Data.icon[0];
         background.sprite = data.Data.background;
         nameText.text = data.Data.cardName;
         discriptionText.text = data.Data.cardDiscription;
@@ -63,13 +67,13 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (!inShop) return;
+        if (inShop) StartHandAnim();
         StartHover(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (!inShop) return;
+        if (inShop) StopHandAnim();
         StartHover(false);
     }
 
@@ -85,7 +89,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         float duration = Mathf.Max(0.01f, animTime);
 
         Vector3 fromRoot = root ? root.localScale : Vector3.one;
-        Vector3 toRoot   = forward ? Vector3.one * hoverScale : Vector3.one;
+        Vector3 toRoot = forward ? Vector3.one * hoverScale : Vector3.one;
 
         while (t < duration)
         {
@@ -100,5 +104,41 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         if (root) root.localScale = toRoot;
 
         hoverRoutine = null;
+    }
+    
+    void StartHandAnim()
+    {
+        if (instance.Data.icon.Count < 2)
+            return;
+        hoverAnim = StartCoroutine(HandAnimLoop());
+    }
+
+    void StopHandAnim()
+    {
+        if (hoverAnim != null) { StopCoroutine(hoverAnim); hoverAnim = null; }
+        // 첫 프레임으로 복구
+        icon.sprite = instance.Data.icon[0];
+    }
+
+    IEnumerator HandAnimLoop()
+    {
+        float interval = 1f / Mathf.Max(1f, 6f);
+
+        int i = 0;
+
+        while (true)
+        {
+            icon.sprite = instance.Data.icon[i];
+
+            i++;
+            if (i >= instance.Data.icon.Count)
+            {
+                i = 0;
+            }
+
+            // UI 애니메이션은 unscaledDeltaTime 권장
+            float t = 0f;
+            while (t < interval) { t += Time.unscaledDeltaTime; yield return null; }
+        }
     }
 }

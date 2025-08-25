@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,7 +14,7 @@ public class CardSO : ScriptableObject
     public CardType cardType;
     public CardRarity cardRarity;
     public int cost;
-    public Sprite icon;
+    public List<Sprite> icon;
     public Sprite background;
     public int value;
 

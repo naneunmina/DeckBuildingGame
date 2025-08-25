@@ -19,7 +19,9 @@ MonoBehaviour:
   cardType: 2
   cardRarity: 2
   cost: 0
-  icon: {fileID: 0}
+  icon:
+  - {fileID: -6288934327618037467, guid: 41d48af852157434bb0c48214520981c, type: 3}
+  - {fileID: -5399979567076921536, guid: 41d48af852157434bb0c48214520981c, type: 3}
   background: {fileID: 6153641931356313673, guid: 5bad67b3720bacb40b513ff6826572b6, type: 3}
   value: 0
   level: 5

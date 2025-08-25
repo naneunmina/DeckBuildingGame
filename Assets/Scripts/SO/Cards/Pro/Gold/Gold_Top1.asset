@@ -13,13 +13,17 @@ MonoBehaviour:
   m_Name: Gold_Top1
   m_EditorClassIdentifier: 
   cardID: 
-  cardName: "\uB538\uAE30\uB9DB \uC911\uB3C5\uC790"
+  cardName: "\uB538\uAE30\uB9DB \uC2E0\uBD09\uC790"
   cardDiscription: "\uB538\uAE30\uB9DB \uB9C8\uCE74\uB871 +5 (\uC77C\uBC18 \uB9C8\uCE74\uB871
     5\uAC1C\uB97C \uC18C\uBAA8\uD569\uB2C8\uB2E4)"
   cardType: 2
   cardRarity: 2
   cost: 0
-  icon: {fileID: 0}
+  icon:
+  - {fileID: -7219503907767373542, guid: f3ca5854f8a7ef340ae1b3585d5a9b2b, type: 3}
+  - {fileID: 6563474380716051494, guid: f3ca5854f8a7ef340ae1b3585d5a9b2b, type: 3}
+  - {fileID: 8260382344286689646, guid: f3ca5854f8a7ef340ae1b3585d5a9b2b, type: 3}
+  - {fileID: -8857195163903756379, guid: f3ca5854f8a7ef340ae1b3585d5a9b2b, type: 3}
   background: {fileID: 6153641931356313673, guid: 5bad67b3720bacb40b513ff6826572b6, type: 3}
   value: 0
   level: 5

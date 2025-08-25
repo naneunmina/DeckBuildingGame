@@ -8,6 +8,7 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private int shopSize = 5;
     [SerializeField] private int lockedSlots = 2;
     [SerializeField, Range(0f, 1f)] private float silverChance = 0.08f;
+    [SerializeField, Range(0f, 1f)] private float maxSilverChance = 0.30f;
     [SerializeField] private List<CardSO> bronzePool = new List<CardSO>();
     [SerializeField] private List<CardSO> silverPool = new List<CardSO>();
     [SerializeField] private List<CardSO> goldPool = new List<CardSO>();
@@ -42,7 +43,7 @@ public class ShopManager : MonoBehaviour
 
     public void SetSilverDropChance(float probability)
     {
-        silverChance = Mathf.Clamp(silverChance + Mathf.Max(0f, probability), 0f, 0.30f);
+        silverChance = Mathf.Clamp(silverChance + Mathf.Max(0f, probability), 0f, maxSilverChance);
     }
 
     public void ForceNextDropsSilver(int count)

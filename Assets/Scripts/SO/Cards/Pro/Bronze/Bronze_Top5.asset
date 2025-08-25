@@ -19,7 +19,10 @@ MonoBehaviour:
   cardType: 2
   cardRarity: 0
   cost: 7
-  icon: {fileID: 0}
+  icon:
+  - {fileID: 2467326034265974930, guid: c61982263a4cc2346909ca6411a691be, type: 3}
+  - {fileID: -2925755498421831241, guid: c61982263a4cc2346909ca6411a691be, type: 3}
+  - {fileID: 7338474213507237392, guid: c61982263a4cc2346909ca6411a691be, type: 3}
   background: {fileID: 8747171696260727651, guid: 441114d50082eab45bea9e6e01bc17e0, type: 3}
   value: 0
   level: 1

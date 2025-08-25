@@ -18,7 +18,11 @@ MonoBehaviour:
   cardType: 0
   cardRarity: 2
   cost: 0
-  icon: {fileID: 0}
+  icon:
+  - {fileID: -8683654363882020675, guid: 12c7ef5157d53ab4288a027596f205e7, type: 3}
+  - {fileID: 2167845032529937759, guid: 12c7ef5157d53ab4288a027596f205e7, type: 3}
+  - {fileID: 8961074436622440386, guid: 12c7ef5157d53ab4288a027596f205e7, type: 3}
+  - {fileID: 1447169137231055949, guid: 12c7ef5157d53ab4288a027596f205e7, type: 3}
   background: {fileID: 6153641931356313673, guid: 5bad67b3720bacb40b513ff6826572b6, type: 3}
   value: 0
   almondAmount: 10
