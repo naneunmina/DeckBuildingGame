@@ -16,14 +16,13 @@ MonoBehaviour:
   cardName: "\uACC4\uBAA8\uC784"
   cardDiscription: "\uD134\uB2F9 \uB2EC\uAC40 \uC0DD\uC0B0 +2"
   cardType: 1
-  cardRarity: 0
+  cardRarity: 1
   cost: 8
   icon:
   - {fileID: -8579763401547022149, guid: 3772b86a886008d40820bf508579080d, type: 3}
   - {fileID: 5435420067161309423, guid: 3772b86a886008d40820bf508579080d, type: 3}
   - {fileID: -8882123557396127189, guid: 3772b86a886008d40820bf508579080d, type: 3}
   - {fileID: -3123862820105101347, guid: 3772b86a886008d40820bf508579080d, type: 3}
-  background: {fileID: 4830444739948473811, guid: d7630fd7833c4e943b22a0758ba4003e, type: 3}
   value: 0
   facilityType: 2
   productionPerTurn: 2

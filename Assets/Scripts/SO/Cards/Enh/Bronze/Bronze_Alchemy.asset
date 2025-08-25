@@ -15,7 +15,7 @@ MonoBehaviour:
   cardID: 
   cardName: "\uC5F0\uAE08\uC220 I"
   cardDiscription: "\uB2E4\uC74C \uB4F1\uC7A5\uD558\uB294 1\uC7A5\uC758 \uCE74\uB4DC\uC758
-    \uB4F1\uAE09\uC774 \uC740\uC774 \uB429\uB2C8\uB2E4."
+    \uB4F1\uAE09\uC774 \uC740\uC774 \uB428"
   cardType: 3
   cardRarity: 0
   cost: 2
@@ -24,7 +24,6 @@ MonoBehaviour:
   - {fileID: -108351129586363505, guid: cc63305b3ecc65c459e16dd9e24bfdc1, type: 3}
   - {fileID: 70891555427443466, guid: cc63305b3ecc65c459e16dd9e24bfdc1, type: 3}
   - {fileID: 6287641992236569890, guid: cc63305b3ecc65c459e16dd9e24bfdc1, type: 3}
-  background: {fileID: 8747171696260727651, guid: 441114d50082eab45bea9e6e01bc17e0, type: 3}
   value: 0
   nextCount: 1
   rarity: 1

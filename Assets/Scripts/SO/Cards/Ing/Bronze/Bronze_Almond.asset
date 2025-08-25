@@ -22,7 +22,6 @@ MonoBehaviour:
   - {fileID: 7072947226333354710, guid: 93d483f535abeb141a33eb2a848dcde5, type: 3}
   - {fileID: -2213996522087672560, guid: 93d483f535abeb141a33eb2a848dcde5, type: 3}
   - {fileID: 8909655219303900285, guid: 93d483f535abeb141a33eb2a848dcde5, type: 3}
-  background: {fileID: 8747171696260727651, guid: 441114d50082eab45bea9e6e01bc17e0, type: 3}
   value: 0
   almondAmount: 1
   sugarAmount: 0

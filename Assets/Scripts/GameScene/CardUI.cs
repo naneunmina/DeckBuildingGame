@@ -14,6 +14,9 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField] private TMP_Text discriptionText;
     [SerializeField] private GameObject costUI;
     [SerializeField] private TMP_Text costText;
+    [SerializeField] private Sprite bronzeBack;
+    [SerializeField] private Sprite silverBack;
+    [SerializeField] private Sprite goldBack;
 
     [Header("Hover Animation")]
     [SerializeField] float animTime = 0.15f;
@@ -51,7 +54,18 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         StopAllCoroutines();
 
         icon.sprite = data.Data.icon[0];
-        background.sprite = data.Data.background;
+        if (data.Data.cardRarity == CardRarity.Bronze)
+        {
+            background.sprite = bronzeBack;
+        }
+        else if (data.Data.cardRarity == CardRarity.Silver)
+        {
+            background.sprite = silverBack;
+        }
+        else
+        {
+            background.sprite = goldBack;
+        }
         nameText.text = data.Data.cardName;
         discriptionText.text = data.Data.cardDiscription;
         costText.text = data.Data.GetCost().ToString();

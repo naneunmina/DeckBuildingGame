@@ -15,7 +15,6 @@ public class CardSO : ScriptableObject
     public CardRarity cardRarity;
     public int cost;
     public List<Sprite> icon;
-    public Sprite background;
     public int value;
 
     /// <summary>

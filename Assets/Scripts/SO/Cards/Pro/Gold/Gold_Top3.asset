@@ -15,7 +15,7 @@ MonoBehaviour:
   cardID: 
   cardName: "\uCD08\uCF54\uB9DB \uC911\uB3C5\uC790"
   cardDiscription: "\uCD08\uCF54\uB9DB \uB9C8\uCE74\uB871 +5 (\uC77C\uBC18 \uB9C8\uCE74\uB871
-    5\uAC1C\uB97C \uC18C\uBAA8\uD569\uB2C8\uB2E4)"
+    5\uAC1C \uC18C\uBAA8)"
   cardType: 2
   cardRarity: 2
   cost: 0

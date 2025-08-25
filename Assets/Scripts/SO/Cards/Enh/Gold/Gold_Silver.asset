@@ -15,7 +15,7 @@ MonoBehaviour:
   cardID: 
   cardName: "\uC740\uC774 \uCD5C\uACE0\uC57C!"
   cardDiscription: "\uC0C1\uC810\uC5D0\uC11C \uC740 \uCE74\uB4DC\uAC00 \uB098\uC62C
-    \uD655\uB960 10% \uC99D\uAC00"
+    \uD655\uB960 +10%"
   cardType: 3
   cardRarity: 2
   cost: 0

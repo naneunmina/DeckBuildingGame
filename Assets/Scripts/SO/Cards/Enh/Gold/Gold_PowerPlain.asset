@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardID: 
   cardName: "\uB9C8\uCE74\uB871 \uACE0\uAE09\uD654 \uC804\uB7B5"
-  cardDiscription: "\uAE30\uBCF8 \uB9C8\uCE74\uB871 \uC810\uC218 15 \uC99D\uAC00"
+  cardDiscription: "\uAE30\uBCF8 \uB9C8\uCE74\uB871 \uC810\uC218 +15"
   cardType: 3
   cardRarity: 2
   cost: 0

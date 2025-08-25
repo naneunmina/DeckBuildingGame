@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardID: 
   cardName: "\uB9C8\uCE74\uB871 \uACE0\uAE09\uD654 \uC804\uB7B5"
-  cardDiscription: "\uAE30\uBCF8 \uB9C8\uCE74\uB871 \uC810\uC218 5 \uC99D\uAC00"
+  cardDiscription: "\uAE30\uBCF8 \uB9C8\uCE74\uB871 \uC810\uC218 +5"
   cardType: 3
   cardRarity: 0
   cost: 7
@@ -23,6 +23,5 @@ MonoBehaviour:
   - {fileID: -1335239606, guid: cfaa2bf1e72703d4e914d1afd630cd7f, type: 3}
   - {fileID: 735617684, guid: cfaa2bf1e72703d4e914d1afd630cd7f, type: 3}
   - {fileID: -367475714, guid: cfaa2bf1e72703d4e914d1afd630cd7f, type: 3}
-  background: {fileID: 8747171696260727651, guid: 441114d50082eab45bea9e6e01bc17e0, type: 3}
   value: 0
   bonus: 5

@@ -21,7 +21,6 @@ MonoBehaviour:
   icon:
   - {fileID: -9032736281871840591, guid: 842a2162e18e4534cbd16f0baa5785c0, type: 3}
   - {fileID: 9118858201526200370, guid: fe1e4dbe47255b843814b7f89a6e5c65, type: 3}
-  background: {fileID: 8747171696260727651, guid: 441114d50082eab45bea9e6e01bc17e0, type: 3}
   value: 0
   almondAmount: 0
   sugarAmount: 0

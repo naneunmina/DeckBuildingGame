@@ -21,7 +21,6 @@ MonoBehaviour:
   icon:
   - {fileID: -5927481963502283737, guid: 5f47e96b6b76ac04fa9ab243d3e44fb7, type: 3}
   - {fileID: 7198400496827000331, guid: 59971e0046622454193982c3f32ed896, type: 3}
-  background: {fileID: 8747171696260727651, guid: 441114d50082eab45bea9e6e01bc17e0, type: 3}
   value: 0
   facilityType: 2
   productionPerTurn: 1
