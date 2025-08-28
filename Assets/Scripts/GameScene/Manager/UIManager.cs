@@ -33,7 +33,6 @@ public class UIManager : MonoBehaviour
     void OnEnable()
     {
         turnManager.OnTurnChanged.AddListener(UpdateTurnUI);
-        // turnManager.OnTimerUpdated.AddListener(UpdateTimerUI);
         turnManager.OnGoldChanged.AddListener(UpdateGoldUI);
         scoreManager.OnScoreChanged.AddListener(UpdateScoreUI);
         resourceManager.OnResourceChanged.AddListener(UpdateResourcesUI);
@@ -71,12 +70,6 @@ public class UIManager : MonoBehaviour
         turnText.text = $"{turn}/{turnManager.maxTurns}";
         if (turn > 1) shopManager.RefreshShop();
     }
-
-    // private void UpdateTimerUI(float remaining)
-    // {
-    //     timerSlider.value = remaining / turnManager.turnTimeSeconds;
-    //     timerText.text = $"{Mathf.CeilToInt(remaining)}s";
-    // }
 
     private void UpdateGoldUI(int gold)
     {
