@@ -66,6 +66,7 @@ public class TurnManager : MonoBehaviour
     public void AddGold(int amount)
     {
         currentGold += amount;
+        if (currentGold < 0) currentGold = 0;
         OnGoldChanged?.Invoke(currentGold);
     }
 

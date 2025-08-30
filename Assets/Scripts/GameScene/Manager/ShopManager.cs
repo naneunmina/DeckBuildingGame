@@ -136,7 +136,7 @@ public class ShopManager : MonoBehaviour
         RefreshShop();
         return true;
     }
-    
+
     private CardInstance RollCardFromPools()
     {
         CardRarity rarity = RollRarity();

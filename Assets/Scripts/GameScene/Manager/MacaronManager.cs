@@ -118,9 +118,20 @@ public class MacaronManager : MonoBehaviour
     {
         return specialCounts[(int)type];
     }
-    
+
     public int GetTotalSpecialCount(SpecialType type)
     {
         return totalSpecialCounts[(int)type];
+    }
+
+    public void MinusPlain(int amount)
+    {
+        if (plainCount < amount) plainCount = 0;
+        else plainCount -= amount;
+    }
+
+    public void PlusPlainPrice(int amount)
+    {
+        plainPrice += amount;
     }
 }

@@ -24,6 +24,5 @@ MonoBehaviour:
   - {fileID: -976593121, guid: 4881fa1a75aa13545a578f045ae163d4, type: 3}
   - {fileID: -955911597, guid: 4881fa1a75aa13545a578f045ae163d4, type: 3}
   - {fileID: 374724769, guid: 4881fa1a75aa13545a578f045ae163d4, type: 3}
-  background: {fileID: 6153641931356313673, guid: 5bad67b3720bacb40b513ff6826572b6, type: 3}
   value: 0
-  addPercent: 10
+  addPercent: 0.05
