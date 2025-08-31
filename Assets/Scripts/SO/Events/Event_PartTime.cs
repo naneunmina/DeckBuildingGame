@@ -14,6 +14,7 @@ public class Event_PartTime : EventSO
     //플레인 가격+1
     turnManager.AddGold(-3);
     macaronManager.PlusPlainPrice(1);
+    SfxEntry.I.PlayKey("Event_Good");
     return new EventResult { art = choice1Art, text = choice1Result };
   }
 
@@ -28,6 +29,7 @@ public class Event_PartTime : EventSO
     //플레인+3
     turnManager.AddGold(-10);
     macaronManager.PlusPlainPrice(3);
+    SfxEntry.I.PlayKey("Event_Good");
       return new EventResult { art = choice2Art, text = choice2Result };
     }
 }

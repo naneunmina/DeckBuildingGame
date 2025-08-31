@@ -16,7 +16,7 @@ MonoBehaviour:
   description: "\uAE08\uC744 \uC0AC\uBCFC\uAE4C, \uC740\uC744 \uC0AC\uBCFC\uAE4C?"
   art: {fileID: 2940667228687391008, guid: 1f428fb40f2b48d4f83ad9a4e8a8b855, type: 3}
   choice1Desc: "\uAE08\uC744 \uC0B0\uB2E4!"
-  choice1Art: {fileID: -2415825427665000048, guid: d2c83550acace8f4382811c7d604766e, type: 3}
+  choice1Art: {fileID: -2469985983478384616, guid: d61f5a95ebb1d4746b6840a0442a72fb, type: 3}
   choice1Result: "\uC640\uC6B0! 50\uACE8\uB4DC\uB97C \uC5BB\uC5C8\uB2E4!"
   choice2Desc: "\uC740\uC744 \uC0B0\uB2E4!"
   choice2Art: {fileID: -2415825427665000048, guid: d2c83550acace8f4382811c7d604766e, type: 3}

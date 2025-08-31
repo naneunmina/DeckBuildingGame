@@ -80,6 +80,7 @@ public class ShopManager : MonoBehaviour
     public void RefreshShopWithCost()
     {
         if (!turnManager.SpendGold(refreshCost)) return;
+        SfxEntry.I.PlayKey("Card_Refresh");
         RefreshShop();
     }
 
@@ -114,6 +115,8 @@ public class ShopManager : MonoBehaviour
         var card = shopSlots[slotIndex];
         if (card == null) return false;
         if (!turnManager.SpendGold(card.Data.GetCost())) return false;
+
+        SfxEntry.I.PlayKey("Card_Buy");
 
         bool drawn = handManager.DrawCard(card);
         if (!drawn)

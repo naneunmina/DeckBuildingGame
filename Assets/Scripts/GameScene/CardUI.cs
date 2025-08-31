@@ -26,8 +26,6 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     private CardInstance instance;
     private HandManager handManager;
     private ShopManager shopManager;
-    private ResourceManager resourceManager;
-    private TurnManager turnManager;
     private bool inShop;
     private int slotIndex;
 
@@ -45,9 +43,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         instance = data;
         handManager = hm;
-        resourceManager = rm;
         shopManager = sm;
-        turnManager = tm;
         inShop = isInShop;
         slotIndex = index;
 
@@ -74,9 +70,14 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         btn.onClick.RemoveAllListeners();
         costUI.gameObject.SetActive(inShop);
         if (inShop)
+        {
             btn.onClick.AddListener(() => shopManager.Purchase(slotIndex));
+        }
         else
+        {
             btn.onClick.AddListener(() => handManager.UseCard(instance));
+            btn.onClick.AddListener(() => SfxEntry.I.PlayKey("Card_Click"));
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)

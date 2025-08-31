@@ -14,6 +14,7 @@ public class Event_Cat : EventSO
     //햄스터를 더 잡아옴 -> 턴당 아몬드 생산량 +5
     macaronManager.MinusPlain(3);
     facilityManager.InstallFacility(FacilityType.AlmondSupply, 5);
+    SfxEntry.I.PlayKey("Event_Good");
     return new EventResult { art = choice1Art, text = choice1Result };
   }
 
@@ -26,6 +27,7 @@ public class Event_Cat : EventSO
     //고양이를 내쫓는다
     //고양이 친구들을 더 데리고 와서 마카롱을 몽땅 빼앗겼다
     macaronManager.MinusPlain(100000);
+    SfxEntry.I.PlayKey("Event_Bad");
       return new EventResult { art = choice2Art, text = choice2Result };
     }
 }

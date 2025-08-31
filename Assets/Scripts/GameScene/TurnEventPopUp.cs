@@ -48,14 +48,16 @@ public class TurnEventPopup : MonoBehaviour
     {
         if (pauseOnOpen) { prevScale = Time.timeScale; Time.timeScale = 0f; }
 
-        if (art)      art.sprite = e.art;
+        if (art) art.sprite = e.art;
         if (txtTitle) txtTitle.text = e.title;
-        if (txtDesc)  txtDesc.text  = e.description;
-        if (txtC1Desc)  txtC1Desc.text  = e.choice1Desc;
-        if (txtC2Desc)  txtC2Desc.text  = e.choice2Desc;
+        if (txtDesc) txtDesc.text = e.description;
+        if (txtC1Desc) txtC1Desc.text = e.choice1Desc;
+        if (txtC2Desc) txtC2Desc.text = e.choice2Desc;
 
         root.gameObject.SetActive(true);
         root.alpha = 1f; root.interactable = true; root.blocksRaycasts = true;
+
+        SfxEntry.I.PlayKey("Event");
     }
 
     void Choose(int idx)

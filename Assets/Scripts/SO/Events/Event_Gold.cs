@@ -13,6 +13,8 @@ public class Event_Gold : EventSO
   {
     //금 선택
     turnManager.AddGold(addGold);
+    if (addGold < 0) SfxEntry.I.PlayKey("Event_Bad");
+    else if (addGold > 0) SfxEntry.I.PlayKey("Event_Good");
     return new EventResult { art = choice1Art, text = choice1Result };
   }
 
@@ -24,6 +26,8 @@ public class Event_Gold : EventSO
     {
     //은 선택
     shopManager.SetSilverDropChance(addSilver);
+    if (addSilver < 0) SfxEntry.I.PlayKey("Event_Bad");
+    else if (addSilver > 0) SfxEntry.I.PlayKey("Event_Good");
       return new EventResult { art = choice2Art, text = choice2Result };
     }
 }
