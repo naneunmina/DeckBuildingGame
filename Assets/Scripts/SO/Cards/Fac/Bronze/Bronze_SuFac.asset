@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d3fd410996057488c4e6b547b2e8d4, type: 3}
+  m_Name: Bronze_SuFac
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uC0AC\uD0D5\uC218\uC218 \uD0A4\uC6B0\uAE30"
+  cardDiscription: "\uD134\uB2F9 \uC124\uD0D5 \uC0DD\uC0B0 +1"
+  cardType: 1
+  cardRarity: 0
+  cost: 5
+  icon:
+  - {fileID: -7828466412786159934, guid: 011c2f2609ee7d54aa98077dc2f8c81d, type: 3}
+  - {fileID: -3803382200304492353, guid: 011c2f2609ee7d54aa98077dc2f8c81d, type: 3}
+  value: 0
+  facilityType: 1
+  productionPerTurn: 1

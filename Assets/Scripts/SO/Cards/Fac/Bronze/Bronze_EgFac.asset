@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d3fd410996057488c4e6b547b2e8d4, type: 3}
+  m_Name: Bronze_EgFac
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uB2ED \uD55C \uB9C8\uB9AC"
+  cardDiscription: "\uD134\uB2F9 \uB2EC\uAC40 \uC0DD\uC0B0 +1"
+  cardType: 1
+  cardRarity: 0
+  cost: 5
+  icon:
+  - {fileID: -5927481963502283737, guid: 5f47e96b6b76ac04fa9ab243d3e44fb7, type: 3}
+  - {fileID: 7198400496827000331, guid: 59971e0046622454193982c3f32ed896, type: 3}
+  value: 0
+  facilityType: 2
+  productionPerTurn: 1

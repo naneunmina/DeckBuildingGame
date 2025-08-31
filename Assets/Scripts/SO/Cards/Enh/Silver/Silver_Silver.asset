@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148a558d8f19037458fb194a08fa750a, type: 3}
+  m_Name: Silver_Silver
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uC740\uC774 \uCD5C\uACE0\uC57C!"
+  cardDiscription: "\uC0C1\uC810\uC5D0\uC11C \uC740 \uCE74\uB4DC\uAC00 \uB098\uC62C
+    \uD655\uB960 +5%"
+  cardType: 3
+  cardRarity: 1
+  cost: 5
+  icon:
+  - {fileID: -8835074841804781243, guid: 4881fa1a75aa13545a578f045ae163d4, type: 3}
+  - {fileID: -976593121, guid: 4881fa1a75aa13545a578f045ae163d4, type: 3}
+  - {fileID: -955911597, guid: 4881fa1a75aa13545a578f045ae163d4, type: 3}
+  - {fileID: 374724769, guid: 4881fa1a75aa13545a578f045ae163d4, type: 3}
+  value: 0
+  addPercent: 0.1

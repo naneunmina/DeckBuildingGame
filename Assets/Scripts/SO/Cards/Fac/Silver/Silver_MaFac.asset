@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d3fd410996057488c4e6b547b2e8d4, type: 3}
+  m_Name: Silver_MaFac
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uC54C\uBC14\uC0DD \uACE0\uC6A9"
+  cardDiscription: "\uD134\uB2F9 \uB9C8\uCE74\uB871 \uC0DD\uC0B0 +2"
+  cardType: 1
+  cardRarity: 1
+  cost: 8
+  icon:
+  - {fileID: -3024628809555407044, guid: 6873d12e452054f419aee77280e078ce, type: 3}
+  - {fileID: 3913241922578219221, guid: 6873d12e452054f419aee77280e078ce, type: 3}
+  - {fileID: -4575911633314193482, guid: 6873d12e452054f419aee77280e078ce, type: 3}
+  - {fileID: 1434893905305192676, guid: 6873d12e452054f419aee77280e078ce, type: 3}
+  background: {fileID: 4830444739948473811, guid: d7630fd7833c4e943b22a0758ba4003e, type: 3}
+  value: 0
+  facilityType: 3
+  productionPerTurn: 2

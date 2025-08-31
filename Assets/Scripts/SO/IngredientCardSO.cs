@@ -17,11 +17,6 @@ public class IngredientCardSO : CardSO
                             HandManager handManager,
                             ShopManager shopManager)
   {
-    if (almondAmount > 0)
-        resourceManager.AddResource("Almond", almondAmount);
-    if (sugarAmount > 0)
-        resourceManager.AddResource("Sugar", sugarAmount);
-    if (eggAmount > 0)
-        resourceManager.AddResource("Egg", eggAmount);
+    resourceManager.AddResource(almondAmount, sugarAmount, eggAmount);
   }
 }

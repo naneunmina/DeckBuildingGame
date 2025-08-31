@@ -1,16 +1,20 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum CardType { Ingredient, Facility, Production, Enhancement, Event, Skill }
+public enum CardRarity { Bronze, Silver, Gold};
 
 [CreateAssetMenu(fileName = "NewCard", menuName = "Deckaroon/Card")]
 public class CardSO : ScriptableObject
 {
     public string cardID;
     public string cardName;
+    public string cardDiscription;
     public CardType cardType;
+    public CardRarity cardRarity;
     public int cost;
-    public Sprite icon;
-    // additional fields per card type
+    public List<Sprite> icon;
     public int value;
 
     /// <summary>

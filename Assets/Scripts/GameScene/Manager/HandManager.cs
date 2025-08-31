@@ -14,6 +14,7 @@ public class HandManager : MonoBehaviour
 
     private readonly List<CardInstance> hand = new();
     public UnityEvent<List<CardInstance>> OnHandChanged;
+    public UnityEvent<CardInstance> OnCardUsed;
 
     private void Start()
     {

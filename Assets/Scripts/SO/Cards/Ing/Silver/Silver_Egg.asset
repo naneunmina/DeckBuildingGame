@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db48151f35886e843bfe45014a81eb2c, type: 3}
+  m_Name: Silver_Egg
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uB2EC\uAC40 \uD55C \uD310"
+  cardDiscription: "\uB2EC\uAC40 +3"
+  cardType: 0
+  cardRarity: 1
+  cost: 2
+  icon:
+  - {fileID: 7501488347861994614, guid: 36e9e0cbecc058c44a4751f2831bce25, type: 3}
+  - {fileID: -5545167285764455860, guid: 3a8335877669c134288d5849caaa1231, type: 3}
+  background: {fileID: 4830444739948473811, guid: d7630fd7833c4e943b22a0758ba4003e, type: 3}
+  value: 0
+  almondAmount: 0
+  sugarAmount: 0
+  eggAmount: 3

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a45e631f0210242b76d64f5739bbb4, type: 3}
+  m_Name: Bronze_Alchemy2
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uC5F0\uAE08\uC220 II"
+  cardDiscription: "\uB2E4\uC74C \uB4F1\uC7A5\uD558\uB294 1\uC7A5\uC758 \uCE74\uB4DC\uC758
+    \uB4F1\uAE09\uC774 \uAE08\uC774 \uB428"
+  cardType: 3
+  cardRarity: 0
+  cost: 10
+  icon:
+  - {fileID: 964291344421816241, guid: 668932f626b6f5342b73b60a68c4296f, type: 3}
+  - {fileID: 8693699719671192564, guid: 668932f626b6f5342b73b60a68c4296f, type: 3}
+  - {fileID: 7002721420792787864, guid: 668932f626b6f5342b73b60a68c4296f, type: 3}
+  - {fileID: -3291086236267948854, guid: 668932f626b6f5342b73b60a68c4296f, type: 3}
+  value: 0
+  nextCount: 1
+  rarity: 2

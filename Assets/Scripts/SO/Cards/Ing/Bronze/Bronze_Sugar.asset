@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db48151f35886e843bfe45014a81eb2c, type: 3}
+  m_Name: Bronze_Sugar
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uAC01\uC124\uD0D5"
+  cardDiscription: "\uC124\uD0D5 +1"
+  cardType: 0
+  cardRarity: 0
+  cost: 1
+  icon:
+  - {fileID: 4536546119277524743, guid: 84524b7fe1219f9479181ed69adf4d22, type: 3}
+  - {fileID: 7118336208102275919, guid: 84524b7fe1219f9479181ed69adf4d22, type: 3}
+  - {fileID: 651695645377811090, guid: 84524b7fe1219f9479181ed69adf4d22, type: 3}
+  - {fileID: -5018582712620672690, guid: 84524b7fe1219f9479181ed69adf4d22, type: 3}
+  value: 0
+  almondAmount: 0
+  sugarAmount: 1
+  eggAmount: 0

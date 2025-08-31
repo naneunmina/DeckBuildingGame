@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db48151f35886e843bfe45014a81eb2c, type: 3}
+  m_Name: Silver_Ran3
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uC2DD\uC7AC\uB8CC \uAD6C\uB3C5 \uC11C\uBE44\uC2A4"
+  cardDiscription: "3\uAC00\uC9C0 \uC2DD\uC7AC\uB8CC \uCD1D +7"
+  cardType: 0
+  cardRarity: 1
+  cost: 4
+  icon:
+  - {fileID: -2958101266743166612, guid: d67a2812561ba6540b033a5475fbdf24, type: 3}
+  - {fileID: 2040713556529099177, guid: d67a2812561ba6540b033a5475fbdf24, type: 3}
+  - {fileID: -9156259186487079307, guid: d67a2812561ba6540b033a5475fbdf24, type: 3}
+  - {fileID: 904848379695128345, guid: d67a2812561ba6540b033a5475fbdf24, type: 3}
+  background: {fileID: 4830444739948473811, guid: d7630fd7833c4e943b22a0758ba4003e, type: 3}
+  value: 0
+  almondAmount: 2
+  sugarAmount: 3
+  eggAmount: 2

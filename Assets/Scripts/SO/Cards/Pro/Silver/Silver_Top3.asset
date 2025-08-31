@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af01ebc462edbf4e83a88d6418a1beb, type: 3}
+  m_Name: Silver_Top3
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uCD08\uCF54\uB9DB \uC560\uD638\uAC00"
+  cardDiscription: "\uCD08\uCF54\uB9DB \uB9C8\uCE74\uB871 +2 (\uC77C\uBC18 \uB9C8\uCE74\uB871
+    2\uAC1C \uC18C\uBAA8)"
+  cardType: 2
+  cardRarity: 1
+  cost: 7
+  icon:
+  - {fileID: -8846464601615903918, guid: 89cfcb84ed6822743a530c38a510c113, type: 3}
+  - {fileID: -8881288127498611982, guid: 89cfcb84ed6822743a530c38a510c113, type: 3}
+  - {fileID: -8375683799963102805, guid: 89cfcb84ed6822743a530c38a510c113, type: 3}
+  - {fileID: 98054517360520783, guid: 89cfcb84ed6822743a530c38a510c113, type: 3}
+  background: {fileID: 4830444739948473811, guid: d7630fd7833c4e943b22a0758ba4003e, type: 3}
+  value: 0
+  level: 2
+  specialType: 1

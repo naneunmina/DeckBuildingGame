@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db48151f35886e843bfe45014a81eb2c, type: 3}
+  m_Name: Bronze_Almond
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uC544\uBAAC\uB4DC \uD55C \uC90C"
+  cardDiscription: "\uC544\uBAAC\uB4DC \uAC00\uB8E8 +1"
+  cardType: 0
+  cardRarity: 0
+  cost: 1
+  icon:
+  - {fileID: 7072947226333354710, guid: 93d483f535abeb141a33eb2a848dcde5, type: 3}
+  - {fileID: -2213996522087672560, guid: 93d483f535abeb141a33eb2a848dcde5, type: 3}
+  - {fileID: 8909655219303900285, guid: 93d483f535abeb141a33eb2a848dcde5, type: 3}
+  value: 0
+  almondAmount: 1
+  sugarAmount: 0
+  eggAmount: 0

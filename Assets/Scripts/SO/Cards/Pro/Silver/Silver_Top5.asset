@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af01ebc462edbf4e83a88d6418a1beb, type: 3}
+  m_Name: Silver_Top5
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uB9D0\uCC28\uB9DB \uC560\uD638\uAC00"
+  cardDiscription: "\uB9D0\uCC28\uB9DB \uB9C8\uCE74\uB871 +2 (\uC77C\uBC18 \uB9C8\uCE74\uB871
+    2\uAC1C \uC18C\uBAA8)"
+  cardType: 2
+  cardRarity: 1
+  cost: 10
+  icon:
+  - {fileID: 389277396827879815, guid: 9ae44170f4c937345b57e9fb0b9ee640, type: 3}
+  - {fileID: 3408957586858530235, guid: 9ae44170f4c937345b57e9fb0b9ee640, type: 3}
+  - {fileID: 8482058070182680597, guid: 9ae44170f4c937345b57e9fb0b9ee640, type: 3}
+  - {fileID: 108111323899504269, guid: 9ae44170f4c937345b57e9fb0b9ee640, type: 3}
+  background: {fileID: 4830444739948473811, guid: d7630fd7833c4e943b22a0758ba4003e, type: 3}
+  value: 0
+  level: 2
+  specialType: 2

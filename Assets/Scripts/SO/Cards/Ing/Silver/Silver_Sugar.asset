@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db48151f35886e843bfe45014a81eb2c, type: 3}
+  m_Name: Silver_Sugar
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uC124\uD0D5 \uD55C \uCEF5"
+  cardDiscription: "\uC124\uD0D5 +3"
+  cardType: 0
+  cardRarity: 1
+  cost: 2
+  icon:
+  - {fileID: 7529327888507142650, guid: 0e20d57536c9ec944921fb7887d4083c, type: 3}
+  - {fileID: 3482372303536544453, guid: 0e20d57536c9ec944921fb7887d4083c, type: 3}
+  background: {fileID: 4830444739948473811, guid: d7630fd7833c4e943b22a0758ba4003e, type: 3}
+  value: 0
+  almondAmount: 0
+  sugarAmount: 3
+  eggAmount: 0

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef5c29463bd558a428700465984283b2, type: 3}
+  m_Name: Event_PartTime
+  m_EditorClassIdentifier: 
+  title: "<\uB9C8\uCF00\uD305 \uACE0\uC218>"
+  description: "\uC804\uB2E8\uC9C0\uB791 \uC778\uD615\uD0C8 \uC911\uC5D0 \uBB50\uAC00
+    \uC88B\uC744\uAE4C?"
+  art: {fileID: 8309288673747204832, guid: 755d59154689950458b5d9e049d3daf0, type: 3}
+  choice1Desc: "\uC804\uB2E8\uC9C0"
+  choice1Art: {fileID: 750227604975349301, guid: 118f7f6afd6f16145ab180468226b894, type: 3}
+  choice1Result: "\uB9C8\uCE74\uB871 \uB2E8\uAC00 \uC0C1\uC2B9!\n(-3\uACE8\uB4DC,
+    \uC77C\uB2E8 \uB9C8\uCE74\uB871 \uAC00\uACA9 +1)"
+  choice2Desc: "\uC778\uD615\uD0C8"
+  choice2Art: {fileID: 7160461062054180731, guid: ed7e283298ae0874e8df51a78892f3d1, type: 3}
+  choice2Result: "\uB9C8\uCE74\uB871 \uB2E8\uAC00 \uC0C1\uC2B9!\n(-10\uACE8\uB4DC,
+    \uC77C\uB2E8 \uB9C8\uCE74\uB871 \uAC00\uACA9 +3)"

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db48151f35886e843bfe45014a81eb2c, type: 3}
+  m_Name: Gold_Sugar
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uC124\uD0D5 \uD3ED\uD3EC"
+  cardDiscription: "\uC124\uD0D5 +10"
+  cardType: 0
+  cardRarity: 2
+  cost: 0
+  icon: {fileID: 0}
+  background: {fileID: 6153641931356313673, guid: 5bad67b3720bacb40b513ff6826572b6, type: 3}
+  value: 0
+  almondAmount: 0
+  sugarAmount: 10
+  eggAmount: 0

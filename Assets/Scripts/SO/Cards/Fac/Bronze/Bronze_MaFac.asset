@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d3fd410996057488c4e6b547b2e8d4, type: 3}
+  m_Name: Bronze_MaFac
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uBBF8\uB2C8 \uC624\uBE10"
+  cardDiscription: "\uD134\uB2F9 \uB9C8\uCE74\uB871 \uC0DD\uC0B0 +1"
+  cardType: 1
+  cardRarity: 0
+  cost: 5
+  icon:
+  - {fileID: -5119041148295729904, guid: 693254755c308e7448a1f3eb525a7ce2, type: 3}
+  - {fileID: -7119241727755114913, guid: 693254755c308e7448a1f3eb525a7ce2, type: 3}
+  value: 0
+  facilityType: 3
+  productionPerTurn: 1

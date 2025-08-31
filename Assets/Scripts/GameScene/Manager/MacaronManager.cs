@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-public enum SpecialType { Special1, Special2, Special3, Special4, Special5 }
+public enum SpecialType { Special1,  Special3,  Special5 }
 
 public class MacaronManager : MonoBehaviour
 {
@@ -12,6 +12,9 @@ public class MacaronManager : MonoBehaviour
 
     private int plainCount;       // 이번 턴 생산된 일반 마카롱 수
     private int[] specialCounts = new int[5];     // 이번 턴 생산된 특수 마카롱 수
+
+    private int totalPlainCount = 0;
+    private int[] totalSpecialCounts = new int[5];
 
     [SerializeField] private int plainPrice = 5;
     [SerializeField] private int[] specialPrices = { 10, 12, 15, 20, 25 };
@@ -41,16 +44,15 @@ public class MacaronManager : MonoBehaviour
         int possible = Mathf.Min(
             desiredCount,
             resourceMgr.almond / almondNeeded,
-            resourceMgr.sugar  / sugarNeeded,
-            resourceMgr.egg    / eggNeeded
+            resourceMgr.sugar / sugarNeeded,
+            resourceMgr.egg / eggNeeded
         );
         if (possible <= 0) return 0;
 
-        resourceMgr.ConsumeResource("Almond", possible * almondNeeded);
-        resourceMgr.ConsumeResource("Sugar",  possible * sugarNeeded);
-        resourceMgr.ConsumeResource("Egg",    possible * eggNeeded);
+        resourceMgr.AddResource(-possible * almondNeeded, -possible * sugarNeeded, -possible * eggNeeded);
 
         plainCount += possible;
+        totalPlainCount += possible;
         OnPlainCountChanged.Invoke(plainCount);
         return possible;
     }
@@ -60,8 +62,18 @@ public class MacaronManager : MonoBehaviour
     /// </summary>
     public void ProduceSpecial(int count, SpecialType type)
     {
-        plainCount -= count;
-        specialCounts[(int)type] += count;
+        if (plainCount < count)
+        {
+            specialCounts[(int)type] += plainCount;
+            totalSpecialCounts[(int)type] += plainCount;
+            plainCount = 0;
+        }
+        else
+        {
+            plainCount -= count;
+            specialCounts[(int)type] += count;
+            totalSpecialCounts[(int)type] += count;
+        }
         OnPlainCountChanged.Invoke(plainCount);
         OnSpecialCountChanged.Invoke(type, specialCounts[(int)type]);
     }
@@ -99,9 +111,27 @@ public class MacaronManager : MonoBehaviour
     }
 
     public int GetPlainCount() => plainCount;
-    
+
+    public int GetTotalPlainCount() => totalPlainCount;
+
     public int GetSpecialCount(SpecialType type)
     {
         return specialCounts[(int)type];
+    }
+
+    public int GetTotalSpecialCount(SpecialType type)
+    {
+        return totalSpecialCounts[(int)type];
+    }
+
+    public void MinusPlain(int amount)
+    {
+        if (plainCount < amount) plainCount = 0;
+        else plainCount -= amount;
+    }
+
+    public void PlusPlainPrice(int amount)
+    {
+        plainPrice += amount;
     }
 }

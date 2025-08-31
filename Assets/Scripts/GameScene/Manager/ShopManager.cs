@@ -7,7 +7,11 @@ public class ShopManager : MonoBehaviour
     [Header("Shop Settings")]
     [SerializeField] private int shopSize = 5;
     [SerializeField] private int lockedSlots = 2;
-    [SerializeField] private List<CardSO> cardPool;
+    [SerializeField, Range(0f, 1f)] private float silverChance = 0.08f;
+    [SerializeField, Range(0f, 1f)] private float maxSilverChance = 0.30f;
+    [SerializeField] private List<CardSO> bronzePool = new List<CardSO>();
+    [SerializeField] private List<CardSO> silverPool = new List<CardSO>();
+    [SerializeField] private List<CardSO> goldPool = new List<CardSO>();
     [SerializeField] private int refreshCost = 1;
 
     [Header("UI References")]
@@ -19,6 +23,9 @@ public class ShopManager : MonoBehaviour
 
     private List<CardInstance> shopSlots;
     private List<bool> isLocked;
+
+    private int forcedDropsRemaining = 0;
+    private CardRarity forcedRarity = CardRarity.Bronze;
 
     public UnityEvent<List<CardInstance>, List<bool>> OnShopChanged;
 
@@ -34,20 +41,46 @@ public class ShopManager : MonoBehaviour
         RefreshShop();
     }
 
+    public void SetSilverDropChance(float probability)
+    {
+        silverChance = Mathf.Clamp(silverChance + Mathf.Max(0f, probability), 0f, maxSilverChance);
+    }
+
+    public void ForceNextDropsSilver(int count)
+    {
+        forcedRarity = CardRarity.Silver;
+        forcedDropsRemaining = Mathf.Max(forcedDropsRemaining, Mathf.Max(0, count));
+    }
+
+    public void ForceNextDropsGold(int count)
+    {
+        forcedRarity = CardRarity.Gold;
+        forcedDropsRemaining = Mathf.Max(forcedDropsRemaining, Mathf.Max(0, count));
+    }
+
+    public void ClearForcedDrops()
+    {
+        forcedDropsRemaining = 0;
+    }
+
     public void RefreshShop()
     {
         for (int i = 0; i < shopSize; i++)
-        {
-            if (isLocked[i]) continue;
-            CardSO data = cardPool[Random.Range(0, cardPool.Count)];
-            shopSlots[i] = new CardInstance(data);
-        }
+            shopSlots[i] = RollCardFromPools();
+        RefreshShopUI();
+    }
+
+    public void RerollSlot(int slotIndex)
+    {
+        if (slotIndex < 0 || slotIndex >= shopSlots.Count) return;
+        shopSlots[slotIndex] = RollCardFromPools();
         RefreshShopUI();
     }
 
     public void RefreshShopWithCost()
     {
         if (!turnManager.SpendGold(refreshCost)) return;
+        SfxEntry.I.PlayKey("Card_Refresh");
         RefreshShop();
     }
 
@@ -83,15 +116,15 @@ public class ShopManager : MonoBehaviour
         if (card == null) return false;
         if (!turnManager.SpendGold(card.Data.GetCost())) return false;
 
+        SfxEntry.I.PlayKey("Card_Buy");
+
         bool drawn = handManager.DrawCard(card);
         if (!drawn)
         {
             // Hand is full: auto-play card without extra cost
             card.Data.Play(turnManager, resourceManager, handManager, this);
         }
-        shopSlots[slotIndex] = new CardInstance(
-            cardPool[Random.Range(0, cardPool.Count)]
-        );
+        shopSlots[slotIndex] = RollCardFromPools();
         RefreshShopUI();
         return true;
     }
@@ -105,5 +138,33 @@ public class ShopManager : MonoBehaviour
         isLocked[slotIndex] = false;
         RefreshShop();
         return true;
+    }
+
+    private CardInstance RollCardFromPools()
+    {
+        CardRarity rarity = RollRarity();
+        CardSO data = DrawFromPool(rarity);
+
+        return new CardInstance(data);
+    }
+
+    private CardRarity RollRarity()
+    {
+        // Forced drops take precedence
+        if (forcedDropsRemaining > 0)
+        {
+            forcedDropsRemaining--;
+            return forcedRarity;
+        }
+
+        // Otherwise, only Silver vs Bronze are random
+        return (Random.value < silverChance) ? CardRarity.Silver : CardRarity.Bronze;
+    }
+
+    private CardSO DrawFromPool(CardRarity r)
+    {
+        List<CardSO> pool = r == CardRarity.Bronze ? bronzePool : r == CardRarity.Silver ? silverPool : goldPool;
+        if (pool == null || pool.Count == 0) return null;
+        return pool[Random.Range(0, pool.Count)];
     }
 }

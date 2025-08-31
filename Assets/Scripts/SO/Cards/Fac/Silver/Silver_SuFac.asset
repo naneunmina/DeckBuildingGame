@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d3fd410996057488c4e6b547b2e8d4, type: 3}
+  m_Name: Silver_SuFac
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uB2F9\uB2F9\uD558\uAC8C \uC0B4\uAE30"
+  cardDiscription: "\uD134\uB2F9 \uC124\uD0D5 \uC0DD\uC0B0 +2"
+  cardType: 1
+  cardRarity: 1
+  cost: 8
+  icon:
+  - {fileID: 4213948251724815534, guid: 6c3660484fb93b34bb2bb687d9567004, type: 3}
+  - {fileID: 8329179132570876047, guid: 6c3660484fb93b34bb2bb687d9567004, type: 3}
+  background: {fileID: 4830444739948473811, guid: d7630fd7833c4e943b22a0758ba4003e, type: 3}
+  value: 0
+  facilityType: 1
+  productionPerTurn: 2

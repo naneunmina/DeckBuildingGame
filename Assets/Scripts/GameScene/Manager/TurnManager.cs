@@ -66,6 +66,7 @@ public class TurnManager : MonoBehaviour
     public void AddGold(int amount)
     {
         currentGold += amount;
+        if (currentGold < 0) currentGold = 0;
         OnGoldChanged?.Invoke(currentGold);
     }
 
@@ -79,7 +80,6 @@ public class TurnManager : MonoBehaviour
 
     private void GameOver()
     {
-        Debug.Log("게임 종료! 최종 점수 표시");
-        // TODO: 최종 점수 계산 호출
+        ScoreboardUI.i.Open();
     }
 }

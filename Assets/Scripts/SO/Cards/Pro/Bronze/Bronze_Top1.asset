@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af01ebc462edbf4e83a88d6418a1beb, type: 3}
+  m_Name: Bronze_Top1
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardName: "\uB538\uAE30\uB9DB \uB9DB\uBCF4\uAE30"
+  cardDiscription: "\uB538\uAE30\uB9DB \uB9C8\uCE74\uB871 +1 (\uC77C\uBC18 \uB9C8\uCE74\uB871
+    1\uAC1C \uC18C\uBAA8)"
+  cardType: 2
+  cardRarity: 0
+  cost: 3
+  icon:
+  - {fileID: 7018280553096902896, guid: 760dd6d168d2c9945a3f0b607172c582, type: 3}
+  - {fileID: -5756316745535495613, guid: 760dd6d168d2c9945a3f0b607172c582, type: 3}
+  - {fileID: 8105269592733105666, guid: 760dd6d168d2c9945a3f0b607172c582, type: 3}
+  background: {fileID: 8747171696260727651, guid: 441114d50082eab45bea9e6e01bc17e0, type: 3}
+  value: 0
+  level: 1
+  specialType: 0
